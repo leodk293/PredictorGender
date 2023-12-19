@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #7d68ff;
+    animation: appear 1000ms ease-in-out;
+}
+@keyframes appear{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body >p{
+    text-align: center;
+    font-family: sans-serif;
+    transform: translateY(40px);
+    font-size: 30px;
+    visibility: hidden;
+}
+.container{
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 5px;
+    font-family: sans-serif;
+    margin: 100px auto;
+    box-shadow: 0 4px 10px #0000003b;
+    padding: 15px;
+    width: 32%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container h1{
+    text-align: center;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+form input{
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    width: 250px;
+}
+form button{
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #7d68ff;
+    background-color: #7d68ff;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 300ms ease-in-out, background-color 300ms 250ms ease-in-out;
+}
+form button:hover{
+    transform: translateX(10px);
+    background-color: #7c68ffc1;
+    border-color: #7c68ffc1;
+}
+form button:active{
+    background-color: crimson;
+    border-color: crimson;
+}
+.gender-container{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    gap: 15px;
+    padding: 20px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    color: #fff;
+}
+.gender-container p{
+    text-align: center;
+}
+.gender-container img{
+    width: 150px;
+    object-fit: cover;
+}
+
+.name{
+    font-size: 30px;
+    font-style: italic;
+}
+
+.man-topic{
+    background-color: #5172e9;
+}
+
+.female-topic{
+    background-color: #ff7295;
+}
+
+.gender{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.probability{
+    color: #f1f1f1;
+    font-weight: bolder;
+    font-size: 17px;
+}
+.danger{
+    background-color: rgba(255, 0, 0, 0.237);
+}
+@media screen and (max-width:900px){
+    body{
+        padding: 10px;
+    }
+    .container{
+        width: auto;
+    }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    form button{
+        width: 270px;
+    }
+    form input{
+        width: auto;
+    }
+    .gender-container{
+        width: auto;
+    }
+}
